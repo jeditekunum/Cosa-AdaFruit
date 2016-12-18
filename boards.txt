@@ -86,3 +86,34 @@ adafruit-atmega32u4-cat.build.variant=adafruit/atmega32u4
 adafruit-atmega32u4-cat.build.extra_flags={build.usb_flags}
 adafruit-atmega32u4-cat.build.core=Cosa:cosa
 
+# AVR:ATmega32U4
+# Ext Crystal Osc.=8 MHz; Start-up time PWRDWN/RESET: 16K CK + 65 ms
+# Brown-out detection level 2.6 V. Serial program downloading enabled
+# Boot Reset vector enable (2048 words, 0x3800).
+adafruit-feather32u4.name=Cosa AdaFruit Feather 32u4 (ATmega32U4/Caterina, 8 Mhz)
+adafruit-feather32u4.upload.tool=avrdude
+adafruit-feather32u4.upload.protocol=avr109
+adafruit-feather32u4.upload.maximum_size=28672
+adafruit-feather32u4.upload.maximum_data_size=2560
+adafruit-feather32u4.upload.maximum_eeprom_size=1024
+adafruit-feather32u4.upload.speed=57600
+adafruit-feather32u4.upload.disable_flushing=true
+adafruit-feather32u4.upload.use_1200bps_touch=true
+adafruit-feather32u4.upload.wait_for_upload_port=true
+
+adafruit-feather32u4.bootloader.path=caterina
+adafruit-feather32u4.bootloader.tool=avrdude
+adafruit-feather32u4.bootloader.low_fuses=0xff
+adafruit-feather32u4.bootloader.high_fuses=0xd8
+adafruit-feather32u4.bootloader.extended_fuses=0xcb
+
+adafruit-feather32u4.build.mcu=atmega32u4
+adafruit-feather32u4.build.f_cpu=8000000L
+adafruit-feather32u4.build.vid=0x239A
+adafruit-feather32u4.build.pid=0x000C
+adafruit-feather32u4.build.usb_product="Adafruit Feather 32u4"
+adafruit-feather32u4.build.board=ADAFRUIT_FEATHER32U4
+adafruit-feather32u4.build.variant=adafruit/feather32u4
+adafruit-feather32u4.build.extra_flags={build.usb_flags}
+adafruit-feather32u4.build.core=Cosa:cosa
+
